@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Sign up</h2>
+    <form action="signup" method="post">
+       <table>
+           <tr>
+               <td>
+                   <label>UserName</label>
+                   <input type="text" name="name" placeholder="Username" required>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <label>Email</label>
+                   <input type="email" name="email" placeholder="Email" required>
+               </td>
+           </tr>
+
+          <tr>
+              <td>
+                  <label>Password</label>
+                  <input type="password" name="passwd" placeholder="Password" required>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <label>Role</label>
+                  <input type="text" name="role" placeholder="Role" required>
+              </td>
+          </tr>
+           <tr>
+               <td>
+                   <input type="submit">
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <p>Already You have an Account? <a href="/phc/signin">SignIn</a></p>
+               </td>
+           </tr>
+       </table>
+
+    </form>
+</body>
+</html>
