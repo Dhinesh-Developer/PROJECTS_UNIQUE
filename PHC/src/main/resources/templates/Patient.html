@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Details</title>
+</head>
+<body>
+<h2>Patients Details from this Hospital</h2>
+<table border="2">
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>Age</td>
+        <td>Blood</td>
+        <td>Name</td>
+        <td>Location</td>
+        <td>Conditions</td>
+        <td>Surgeries</td>
+        <td>Email</td>
+        <td>Email Relation</td>
+        <td>Emergency Contact</td>
+        <td>Gender</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="patient : ${patients}">
+        <td th:text="${patient.id}"></td>
+        <td th:text="${patient.age}"></td>
+        <td th:text="${patient.blood}"></td>
+        <td th:text="${patient.name}"></td>
+        <td th:text="${patient.location}"></td>
+        <td th:text="${patient.conditions}"></td>
+        <td th:text="${patient.surgeries}"></td>
+        <td th:text="${patient.email}"></td>
+        <td th:text="${patient.emailrelation}"></td>
+        <td th:text="${patient.emergencycontact}"></td>
+        <td th:text="${patient.gender}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
