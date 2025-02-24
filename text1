@@ -1,0 +1,126 @@
+
+import './App.css'
+
+function App() {
+  const name = "DhineshKumar M";
+  const profession = "Full stack java Developer"
+
+  const project = [
+   {
+    title : "Project one",
+    description : "A web application built using the react",
+    link  : "#"
+   },
+   {
+    title : "Project two",
+    description : "A e-commerce project",
+    link : "#"
+   },
+   {
+    title : "Project three",
+    description : "A  AI project",
+    link  : "#"
+   }
+  ]
+
+ 
+  return (
+   
+    <div className='APP'>
+      <header className='header'>
+        <h1>{name}</h1>
+        <p>{profession}</p>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#about">projects</a>
+          <a href="#about">contact</a>
+        </nav>
+      </header>
+    {/* About section */}
+
+    <section id='about' className='about-section'>
+      <h2>About Me</h2>
+      <p> Hello i am {name} passionate about {profession}. I love to solve the real world application</p>
+
+    </section>
+
+    {/* Project section */}
+    <section id='projects' className='projects-section'>
+      <h2>Projects</h2>
+      <div className='projects-lists'>
+        {project.map((project, index) => (
+          <div key={index} className='project-item'>
+            <h3>{project.title}</h3>
+            <h3>{project.description}</h3>
+          </div>
+        ))}
+        </div>
+      </section>
+
+      {/* Contact section */}
+      <section id='contact' className='contact-section'>
+        <h2>Contact</h2>
+        <p>If you would like to get in touch, please email me at <a href="mailto:example@example.com">example@example.com</a></p>
+      </section>
+   
+      <section id='footer' className='footer-section'>
+      <footer className='footer'>
+        <p>&copy; 2023 DhineshKumar M. All rights reserved.</p>
+      </footer>
+      </section>
+    </div>
+  )
+}
+
+export default App
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .header{
+    background-color: magenta;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .about-section{
+    padding: 50px;
+    text-align: center;
+    background-color: aqua;
+  }
+  
+  .projects-section{
+    padding: 50px;
+    text-align: center;
+    background-color: lightgreen;
+  }
+  
+  .contact-section{
+    margin: 0px;
+    text-align: center;
+    padding: 50px;
+    background-color: blue;
+    color: white;
+  }
+  
+  .footer-section{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+  }
+  
+  
+  
+  
